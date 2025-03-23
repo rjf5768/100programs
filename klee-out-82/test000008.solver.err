@@ -1,0 +1,7 @@
+Error: Query timed out (fork).
+File: 83.c
+Line: 25
+assembly.ll line: 150
+State: 18
+Stack: 
+	#000000150 in main() at 83.c:25

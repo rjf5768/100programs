@@ -1,0 +1,4 @@
+array seed[4] : w32 -> w8 = symbolic
+(query [(Ule (ReadLSB w32 0 seed)
+              1000)]
+        false)

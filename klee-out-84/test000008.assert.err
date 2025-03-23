@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: 0
+File: 85.c
+Line: 22
+assembly.ll line: 138
+State: 8
+Stack: 
+	#000000138 in main() at 85.c:22

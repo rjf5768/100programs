@@ -1,0 +1,6 @@
+(set-logic QF_AUFBV )
+(declare-fun input () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun transitions () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (let ( (?B1 (concat  (select  transitions (_ bv3 32) ) (concat  (select  transitions (_ bv2 32) ) (concat  (select  transitions (_ bv1 32) ) (select  transitions (_ bv0 32) ) ) ) ) ) (?B2 (bvsrem  (concat  (select  input (_ bv3 32) ) (concat  (select  input (_ bv2 32) ) (concat  (select  input (_ bv1 32) ) (select  input (_ bv0 32) ) ) ) ) (_ bv3 32) ) ) ) (and  (and  (and  (and  (bvsle  (_ bv1 32) ?B1 ) (bvsle  ?B1 (_ bv20 32) ) ) (=  false (=  (_ bv0 32) ?B2 ) ) ) (=  false (=  (_ bv1 32) ?B2 ) ) ) (=  false (bvslt  (_ bv1 32) ?B1 ) ) ) ) )
+(check-sat)
+(exit)

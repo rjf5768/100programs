@@ -1,0 +1,5 @@
+(set-logic QF_AUFBV )
+(declare-fun seed () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (bvule  (concat  (select  seed (_ bv3 32) ) (concat  (select  seed (_ bv2 32) ) (concat  (select  seed (_ bv1 32) ) (select  seed (_ bv0 32) ) ) ) ) (_ bv1000 32) ) )
+(check-sat)
+(exit)

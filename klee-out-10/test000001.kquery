@@ -1,0 +1,8 @@
+array exp[4] : w32 -> w8 = symbolic
+array mod[4] : w32 -> w8 = symbolic
+(query [(Slt 1
+              (ReadLSB w32 0 mod))
+         (Eq false
+             (Sle 0
+                  (ReadLSB w32 0 exp)))]
+        false)

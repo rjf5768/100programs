@@ -1,0 +1,29 @@
+array base[4] : w32 -> w8 = symbolic
+array exp[4] : w32 -> w8 = symbolic
+(query [(Sle 0
+              N0:(ReadLSB w32 0 exp))
+         (Sle N0 10)
+         (Sle 0
+              N1:(ReadLSB w32 0 base))
+         (Sle N1 10)
+         (Eq false (Eq 0 N0))
+         (Eq false (Eq 1 N0))
+         (Eq false (Eq 2 N0))
+         (Eq false (Eq 3 N0))
+         (Eq false (Eq 4 N0))
+         (Eq false (Eq 5 N0))
+         (Eq false (Eq 6 N0))
+         (Eq false (Eq 7 N0))
+         (Eq false (Eq 8 N0))
+         (Eq false (Eq 9 N0))
+         (Eq false
+             (Slt (Mul w32 N1
+                           (Mul w32 N1
+                                    (Mul w32 N1
+                                             (Mul w32 N1
+                                                      (Mul w32 N1
+                                                               (Mul w32 N1
+                                                                        (Mul w32 N1
+                                                                                 (Mul w32 N1 (Mul w32 N1 N1)))))))))
+                  N1))]
+        false)

@@ -1,0 +1,5 @@
+(set-logic QF_AUFBV )
+(declare-fun deposit () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (=  false (bvsle  (_ bv0 32) (concat  (select  deposit (_ bv3 32) ) (concat  (select  deposit (_ bv2 32) ) (concat  (select  deposit (_ bv1 32) ) (select  deposit (_ bv0 32) ) ) ) ) ) ) )
+(check-sat)
+(exit)

@@ -1,0 +1,23 @@
+klee --write-kqueries --write-smt2s 88.bc
+PID: 10094
+Using monotonic steady clock with 1/1000000000s resolution
+Started: 2025-03-23 16:00:16
+BEGIN searcher description
+<InterleavedSearcher> containing 2 searchers:
+RandomPathSearcher
+WeightedRandomSearcher::CoveringNew
+</InterleavedSearcher>
+END searcher description
+Finished: 2025-03-23 16:00:16
+Elapsed: 00:00:00
+KLEE: done: explored paths = 51
+KLEE: done: avg. constructs per query = 63
+KLEE: done: total queries = 52
+KLEE: done: valid queries = 1
+KLEE: done: invalid queries = 51
+KLEE: done: query cex = 52
+
+KLEE: done: total instructions = 1231
+KLEE: done: completed paths = 50
+KLEE: done: partially completed paths = 1
+KLEE: done: generated tests = 51

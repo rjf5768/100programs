@@ -1,0 +1,5 @@
+(set-logic QF_AUFBV )
+(declare-fun divisor () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (=  false (bvslt  (_ bv0 32) (concat  (select  divisor (_ bv3 32) ) (concat  (select  divisor (_ bv2 32) ) (concat  (select  divisor (_ bv1 32) ) (select  divisor (_ bv0 32) ) ) ) ) ) ) )
+(check-sat)
+(exit)

@@ -1,0 +1,12 @@
+array dividend[4] : w32 -> w8 = symbolic
+array divisor[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0
+                 N0:(ReadLSB w32 0 divisor)))
+         (Eq false
+             (Slt N1:(ReadLSB w32 0 dividend)
+                  N2:(Mul w32 (SDiv w32 N1 N0) N0)))
+         (Eq false
+             (Slt N2
+                  (Add w32 1 (Sub w32 N1 N0))))]
+        false)

@@ -1,0 +1,8 @@
+Error: Query timed out (fork).
+File: 9.c
+Line: 7
+assembly.ll line: 24
+State: 100
+Stack: 
+	#000000024 in collatz_steps(symbolic) at 9.c:7
+	#100000089 in main() at 9.c:22

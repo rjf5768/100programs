@@ -1,0 +1,5 @@
+(set-logic QF_AUFBV )
+(declare-fun u () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (=  false (bvsle  (_ bv4294967216 32) (concat  (select  u (_ bv3 32) ) (concat  (select  u (_ bv2 32) ) (concat  (select  u (_ bv1 32) ) (select  u (_ bv0 32) ) ) ) ) ) ) )
+(check-sat)
+(exit)

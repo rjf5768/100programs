@@ -1,0 +1,5 @@
+(set-logic QF_AUFBV )
+(declare-fun minutes () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (let ( (?B1 (concat  (select  minutes (_ bv3 32) ) (concat  (select  minutes (_ bv2 32) ) (concat  (select  minutes (_ bv1 32) ) (select  minutes (_ bv0 32) ) ) ) ) ) ) (and  (bvsle  (_ bv0 32) ?B1 ) (bvslt  ?B1 (_ bv1440 32) ) ) ) )
+(check-sat)
+(exit)

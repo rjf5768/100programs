@@ -1,0 +1,12 @@
+KLEE: Using Z3 solver backend
+KLEE: Deterministic allocator: Using quarantine queue size 8
+KLEE: Deterministic allocator: globals (start-address=0x7c568b800000 size=10 GiB)
+KLEE: Deterministic allocator: constants (start-address=0x7c540b800000 size=10 GiB)
+KLEE: Deterministic allocator: heap (start-address=0x7b540b800000 size=1024 GiB)
+KLEE: Deterministic allocator: stack (start-address=0x7b340b800000 size=128 GiB)
+KLEE: ERROR: 6.c:14: invalid klee_assume call (provably false)
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: 6.c:15: invalid klee_assume call (provably false)
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: 6.c:18: ASSERTION FAIL: 0
+KLEE: NOTE: now ignoring this error at this location

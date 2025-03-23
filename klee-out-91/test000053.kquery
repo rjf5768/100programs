@@ -1,0 +1,20 @@
+array cycles[4] : w32 -> w8 = symbolic
+array start[4] : w32 -> w8 = symbolic
+(query [(Slt 0
+              N0:(ReadLSB w32 0 start))
+         (Sle N0 100)
+         (Sle 1
+              N1:(ReadLSB w32 0 cycles))
+         (Sle N1 10)
+         (Slt 0 (Add w32 4294967295 N0))
+         (Slt 0 (Add w32 4294967294 N0))
+         (Slt 0 (Add w32 4294967293 N0))
+         (Eq false
+             (Slt 0 (Add w32 4294967292 N0)))
+         (Slt 1 N1)
+         (Slt 2 N1)
+         (Slt 3 N1)
+         (Slt 4 N1)
+         (Slt 5 N1)
+         (Eq false (Slt 6 N1))]
+        false)

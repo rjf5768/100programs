@@ -1,0 +1,8 @@
+KLEE: Using Z3 solver backend
+KLEE: Deterministic allocator: Using quarantine queue size 8
+KLEE: Deterministic allocator: globals (start-address=0x7ed63a200000 size=10 GiB)
+KLEE: Deterministic allocator: constants (start-address=0x7ed3ba200000 size=10 GiB)
+KLEE: Deterministic allocator: heap (start-address=0x7dd3ba200000 size=1024 GiB)
+KLEE: Deterministic allocator: stack (start-address=0x7db3ba200000 size=128 GiB)
+KLEE: ERROR: 54.c:11: ASSERTION FAIL: 0
+KLEE: NOTE: now ignoring this error at this location

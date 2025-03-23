@@ -1,0 +1,35 @@
+array n[4] : w32 -> w8 = symbolic
+(query [(Sle 0
+              N0:(ReadLSB w32 0 n))
+         (Sle N0 20)
+         (Eq false (Sle N0 1))
+         (Eq false
+             (Sle (Add w32 4294967295 N0) 1))
+         (Eq false
+             (Sle (Add w32 4294967294 N0) 1))
+         (Eq false
+             (Sle (Add w32 4294967293 N0) 1))
+         (Eq false
+             (Sle (Add w32 4294967292 N0) 1))
+         (Eq false
+             (Sle (Add w32 4294967291 N0) 1))
+         (Eq false
+             (Sle (Add w32 4294967290 N0) 1))
+         (Eq false
+             (Sle (Add w32 4294967289 N0) 1))
+         (Eq false
+             (Sle (Add w32 4294967288 N0) 1))
+         (Eq false
+             (Sle (Add w32 4294967287 N0) 1))
+         (Eq false
+             (Sle (Add w32 4294967286 N0) 1))
+         (Eq false
+             (Sle (Add w32 4294967285 N0) 1))
+         (Eq false
+             (Sle (Add w32 4294967284 N0) 1))
+         (Eq false
+             (Sle (Add w32 4294967283 N0) 1))
+         (Eq false
+             (Sle (Add w32 4294967282 N0) 1))
+         (Sle (Add w32 4294967281 N0) 1)]
+        false)

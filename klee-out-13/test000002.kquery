@@ -1,0 +1,9 @@
+array deposit[4] : w32 -> w8 = symbolic
+array withdraw[4] : w32 -> w8 = symbolic
+(query [(Sle 0
+              N0:(ReadLSB w32 0 deposit))
+         (Sle N0 50)
+         (Eq false
+             (Sle 0
+                  (ReadLSB w32 0 withdraw)))]
+        false)

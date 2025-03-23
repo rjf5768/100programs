@@ -1,0 +1,7 @@
+(set-logic QF_AUFBV )
+(declare-fun base () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun exp () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun mod () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (let ( (?B1 (concat  (select  exp (_ bv3 32) ) (concat  (select  exp (_ bv2 32) ) (concat  (select  exp (_ bv1 32) ) (select  exp (_ bv0 32) ) ) ) ) ) (?B2 (concat  (select  mod (_ bv3 32) ) (concat  (select  mod (_ bv2 32) ) (concat  (select  mod (_ bv1 32) ) (select  mod (_ bv0 32) ) ) ) ) ) (?B3 (concat  (select  base (_ bv3 32) ) (concat  (select  base (_ bv2 32) ) (concat  (select  base (_ bv1 32) ) (select  base (_ bv0 32) ) ) ) ) ) ) (let ( (?B4 (bvsdiv  ?B1 (_ bv2 32) ) ) (?B5 (bvsrem  ?B3 ?B2 ) ) ) (let ( (?B6 (bvsdiv  ?B4 (_ bv2 32) ) ) (?B7 (bvsrem  (bvmul  ?B5 ?B5 ) ?B2 ) ) ) (and  (and  (and  (and  (and  (and  (and  (and  (and  (and  (and  (bvslt  (_ bv1 32) ?B2 ) (bvsle  (_ bv0 32) ?B1 ) ) (bvsle  ?B1 (_ bv20 32) ) ) (bvsle  (_ bv0 32) ?B3 ) ) (bvsle  ?B3 (_ bv100 32) ) ) (bvslt  (_ bv0 32) ?B1 ) ) (=  (_ bv1 32) (bvsrem  ?B1 (_ bv2 32) ) ) ) (bvslt  (_ bv0 32) ?B4 ) ) (=  false (=  (_ bv1 32) (bvsrem  ?B4 (_ bv2 32) ) ) ) ) (=  (_ bv1 32) (bvsrem  ?B6 (_ bv2 32) ) ) ) (=  false (bvslt  (_ bv0 32) (bvsdiv  ?B6 (_ bv2 32) ) ) ) ) (bvslt  (bvsrem  (bvmul  (bvsrem  ?B5 ?B2 ) (bvsrem  (bvmul  ?B7 ?B7 ) ?B2 ) ) ?B2 ) (_ bv0 32) ) ) ) ) ) )
+(check-sat)
+(exit)

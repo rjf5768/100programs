@@ -1,0 +1,6 @@
+(set-logic QF_AUFBV )
+(declare-fun cycles () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun start () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (let ( (?B1 (concat  (select  start (_ bv3 32) ) (concat  (select  start (_ bv2 32) ) (concat  (select  start (_ bv1 32) ) (select  start (_ bv0 32) ) ) ) ) ) ) (and  (and  (bvslt  (_ bv0 32) ?B1 ) (bvsle  ?B1 (_ bv100 32) ) ) (=  false (bvsle  (_ bv1 32) (concat  (select  cycles (_ bv3 32) ) (concat  (select  cycles (_ bv2 32) ) (concat  (select  cycles (_ bv1 32) ) (select  cycles (_ bv0 32) ) ) ) ) ) ) ) ) )
+(check-sat)
+(exit)

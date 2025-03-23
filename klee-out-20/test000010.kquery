@@ -1,0 +1,10 @@
+array day[4] : w32 -> w8 = symbolic
+array month[4] : w32 -> w8 = symbolic
+(query [(Sle 0
+              N0:(ReadLSB w32 0 day))
+         (Sle N0 40)
+         (Eq false (Slt N0 1))
+         (Eq 4
+             (ReadLSB w32 0 month))
+         (Eq false (Slt 30 N0))]
+        false)

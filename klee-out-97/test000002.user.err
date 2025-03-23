@@ -1,0 +1,7 @@
+Error: invalid klee_assume call (provably false)
+File: 98.c
+Line: 10
+assembly.ll line: 63
+State: 3
+Stack: 
+	#000000063 in main() at 98.c:10
