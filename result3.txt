@@ -1,0 +1,229 @@
+--- Program 80 ---
+my kquery for test000001:
+array a[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Slt 0
+                  (ReadLSB w32 0 a)))]
+        false)
+
+
+my kquery for test000002:
+array a[4] : w32 -> w8 = symbolic
+array b[4] : w32 -> w8 = symbolic
+(query [(Slt 0
+              N0:(ReadLSB w32 0 a))
+         (Slt 0
+              N1:(ReadLSB w32 0 b))
+         (Sle N0 100)
+         (Sle N1 100)
+         (Eq 0 (SRem w32 N0 N1))]
+        false)
+
+
+my kquery for test000003:
+array a[4] : w32 -> w8 = symbolic
+array b[4] : w32 -> w8 = symbolic
+(query [(Slt 0
+              N0:(ReadLSB w32 0 a))
+         (Slt 0
+              N1:(ReadLSB w32 0 b))
+         (Sle N0 100)
+         (Sle N1 100)
+         (Eq false
+             (Eq 0 N2:(SRem w32 N0 N1)))
+         (Eq 0 (SRem w32 N1 N2))]
+        false)
+
+
+my kquery for test000004:
+array a[4] : w32 -> w8 = symbolic
+array b[4] : w32 -> w8 = symbolic
+(query [(Slt 0
+              N0:(ReadLSB w32 0 a))
+         (Slt 0
+              N1:(ReadLSB w32 0 b))
+         (Sle N0 100)
+         (Sle N1 100)
+         (Eq false
+             (Eq 0 N2:(SRem w32 N0 N1)))
+         (Eq false
+             (Eq 0 N3:(SRem w32 N1 N2)))
+         (Eq 0 (SRem w32 N2 N3))]
+        false)
+
+
+my kquery for test000005:
+array a[4] : w32 -> w8 = symbolic
+array b[4] : w32 -> w8 = symbolic
+(query [(Slt 0
+              N0:(ReadLSB w32 0 a))
+         (Slt 0
+              N1:(ReadLSB w32 0 b))
+         (Sle N0 100)
+         (Sle N1 100)
+         (Eq false
+             (Eq 0 N2:(SRem w32 N0 N1)))
+         (Eq false
+             (Eq 0 N3:(SRem w32 N1 N2)))
+         (Eq false
+             (Eq 0 N4:(SRem w32 N2 N3)))
+         (Eq 0 (SRem w32 N3 N4))]
+        false)
+
+
+my kquery for test000006:
+array a[4] : w32 -> w8 = symbolic
+array b[4] : w32 -> w8 = symbolic
+(query [(Slt 0
+              N0:(ReadLSB w32 0 a))
+         (Slt 0
+              N1:(ReadLSB w32 0 b))
+         (Sle N0 100)
+         (Sle N1 100)
+         (Eq false
+             (Eq 0 N2:(SRem w32 N0 N1)))
+         (Eq false
+             (Eq 0 N3:(SRem w32 N1 N2)))
+         (Eq false
+             (Eq 0 N4:(SRem w32 N2 N3)))
+         (Eq false
+             (Eq 0 N5:(SRem w32 N3 N4)))
+         (Eq 0 (SRem w32 N4 N5))]
+        false)
+
+
+my kquery for test000007:
+array a[4] : w32 -> w8 = symbolic
+array b[4] : w32 -> w8 = symbolic
+(query [(Slt 0
+              N0:(ReadLSB w32 0 a))
+         (Slt 0
+              N1:(ReadLSB w32 0 b))
+         (Sle N0 100)
+         (Sle N1 100)
+         (Eq false
+             (Eq 0 N2:(SRem w32 N0 N1)))
+         (Eq false
+             (Eq 0 N3:(SRem w32 N1 N2)))
+         (Eq false
+             (Eq 0 N4:(SRem w32 N2 N3)))
+         (Eq false
+             (Eq 0 N5:(SRem w32 N3 N4)))
+         (Eq false
+             (Eq 0 N6:(SRem w32 N4 N5)))
+         (Eq 0 (SRem w32 N5 N6))]
+        false)
+
+
+my kquery for test000008:
+array a[4] : w32 -> w8 = symbolic
+array b[4] : w32 -> w8 = symbolic
+(query [(Slt 0
+              N0:(ReadLSB w32 0 a))
+         (Slt 0
+              N1:(ReadLSB w32 0 b))
+         (Sle N0 100)
+         (Sle N1 100)
+         (Eq false
+             (Eq 0 N2:(SRem w32 N0 N1)))
+         (Eq false
+             (Eq 0 N3:(SRem w32 N1 N2)))
+         (Eq false
+             (Eq 0 N4:(SRem w32 N2 N3)))
+         (Eq false
+             (Eq 0 N5:(SRem w32 N3 N4)))
+         (Eq false
+             (Eq 0 N6:(SRem w32 N4 N5)))
+         (Eq false
+             (Eq 0 N7:(SRem w32 N5 N6)))
+         (Eq 0 (SRem w32 N6 N7))]
+        false)
+
+
+my kquery for test000009:
+array a[4] : w32 -> w8 = symbolic
+array b[4] : w32 -> w8 = symbolic
+(query [(Slt 0
+              N0:(ReadLSB w32 0 a))
+         (Slt 0
+              N1:(ReadLSB w32 0 b))
+         (Sle N0 100)
+         (Sle N1 100)
+         (Eq false
+             (Eq 0 N2:(SRem w32 N0 N1)))
+         (Eq false
+             (Eq 0 N3:(SRem w32 N1 N2)))
+         (Eq false
+             (Eq 0 N4:(SRem w32 N2 N3)))
+         (Eq false
+             (Eq 0 N5:(SRem w32 N3 N4)))
+         (Eq false
+             (Eq 0 N6:(SRem w32 N4 N5)))
+         (Eq false
+             (Eq 0 N7:(SRem w32 N5 N6)))
+         (Eq false
+             (Eq 0 N8:(SRem w32 N6 N7)))
+         (Eq 0 (SRem w32 N7 N8))]
+        false)
+
+
+my kquery for test000010:
+array a[4] : w32 -> w8 = symbolic
+array b[4] : w32 -> w8 = symbolic
+(query [(Slt 0
+              N0:(ReadLSB w32 0 a))
+         (Slt 0
+              N1:(ReadLSB w32 0 b))
+         (Sle N0 100)
+         (Sle N1 100)
+         (Eq false
+             (Eq 0 N2:(SRem w32 N0 N1)))
+         (Eq false
+             (Eq 0 N3:(SRem w32 N1 N2)))
+         (Eq false
+             (Eq 0 N4:(SRem w32 N2 N3)))
+         (Eq false
+             (Eq 0 N5:(SRem w32 N3 N4)))
+         (Eq false
+             (Eq 0 N6:(SRem w32 N4 N5)))
+         (Eq false
+             (Eq 0 N7:(SRem w32 N5 N6)))
+         (Eq false
+             (Eq 0 N8:(SRem w32 N6 N7)))
+         (Eq false
+             (Eq 0 N9:(SRem w32 N7 N8)))
+         (Eq 0 (SRem w32 N8 N9))]
+        false)
+
+
+my kquery for test000011:
+array a[4] : w32 -> w8 = symbolic
+array b[4] : w32 -> w8 = symbolic
+(query [(Slt 0
+              N0:(ReadLSB w32 0 a))
+         (Slt 0
+              N1:(ReadLSB w32 0 b))
+         (Sle N0 100)
+         (Sle N1 100)
+         (Eq false
+             (Eq 0 N2:(SRem w32 N0 N1)))
+         (Eq false
+             (Eq 0 N3:(SRem w32 N1 N2)))
+         (Eq false
+             (Eq 0 N4:(SRem w32 N2 N3)))
+         (Eq false
+             (Eq 0 N5:(SRem w32 N3 N4)))
+         (Eq false
+             (Eq 0 N6:(SRem w32 N4 N5)))
+         (Eq false
+             (Eq 0 N7:(SRem w32 N5 N6)))
+         (Eq false
+             (Eq 0 N8:(SRem w32 N6 N7)))
+         (Eq false
+             (Eq 0 N9:(SRem w32 N7 N8)))
+         (Eq false
+             (Eq 0 N10:(SRem w32 N8 N9)))
+         (Eq false (Eq 0 (SRem w32 N9 N10)))]
+        false)
+
+
