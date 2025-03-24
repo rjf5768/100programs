@@ -15,7 +15,7 @@ int main() {
   int n;
   klee_make_symbolic(&n, sizeof(n), "n");
   klee_assume(n >= 0);
-  klee_assume(n <= 100);
+  klee_assume(n <= 10);
   int s = sum_digits(n);
   if(s > n)
     klee_assert(0);

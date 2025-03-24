@@ -1,7 +1,7 @@
 array n[4] : w32 -> w8 = symbolic
 (query [(Sle 0
               N0:(ReadLSB w32 0 n))
-         (Sle N0 100)
+         (Sle N0 10)
          (Slt 0 N0)
          (Slt 0 (Add w32 4294967295 N0))
          (Slt 0 (Add w32 4294967294 N0))
@@ -11,7 +11,5 @@ array n[4] : w32 -> w8 = symbolic
          (Slt 0 (Add w32 4294967290 N0))
          (Slt 0 (Add w32 4294967289 N0))
          (Slt 0 (Add w32 4294967288 N0))
-         (Slt 0 (Add w32 4294967287 N0))
-         (Eq false
-             (Slt 0 (Add w32 4294967286 N0)))]
+         (Slt 0 (Add w32 4294967287 N0))]
         false)

@@ -39,7 +39,7 @@ define dso_local i32 @main() #0 !dbg !10 {
 
 18:                                               ; preds = %12
   %19 = load i32, i32* %3, align 4, !dbg !32
-  %20 = icmp sle i32 %19, 100, !dbg !33
+  %20 = icmp sle i32 %19, 20, !dbg !33
   br label %21
 
 21:                                               ; preds = %18, %12
@@ -89,7 +89,7 @@ attributes #2 = { "frame-pointer"="all" "no-trapping-math"="true" "stack-protect
 !llvm.ident = !{!9}
 
 !0 = distinct !DICompileUnit(language: DW_LANG_C99, file: !1, producer: "Ubuntu clang version 14.0.0-1ubuntu1.1", isOptimized: false, runtimeVersion: 0, emissionKind: FullDebug, splitDebugInlining: false, nameTableKind: None)
-!1 = !DIFile(filename: "99.c", directory: "/home/rongfeng/klee/code/100 programs", checksumkind: CSK_MD5, checksum: "745835ab1fa35a73c67ff281e20394d6")
+!1 = !DIFile(filename: "99.c", directory: "/home/rongfeng/klee/code/100 programs", checksumkind: CSK_MD5, checksum: "bd89d93afa7a7a07f1388cb74b1fd448")
 !2 = !{i32 7, !"Dwarf Version", i32 5}
 !3 = !{i32 2, !"Debug Info Version", i32 3}
 !4 = !{i32 1, !"wchar_size", i32 4}

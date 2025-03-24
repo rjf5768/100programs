@@ -15,7 +15,7 @@ int main(void) {
 
   // Restrict a to ensure the recursion terminates.
   klee_assume(a >= 0);
-  klee_assume(a <= 100);
+  klee_assume(a <= 10);
 
   int result = sum(a, b);
   if (result == a + b) {

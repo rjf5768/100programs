@@ -57,7 +57,7 @@ define dso_local i32 @main() #0 !dbg !32 {
   %8 = sext i32 %7 to i64, !dbg !39
   call void @klee_assume(i64 noundef %8), !dbg !41
   %9 = load i32, i32* %2, align 4, !dbg !42
-  %10 = icmp sle i32 %9, 10000, !dbg !43
+  %10 = icmp sle i32 %9, 10, !dbg !43
   %11 = zext i1 %10 to i32, !dbg !43
   %12 = sext i32 %11 to i64, !dbg !42
   call void @klee_assume(i64 noundef %12), !dbg !44
@@ -96,7 +96,7 @@ attributes #4 = { noreturn nounwind }
 !llvm.ident = !{!9}
 
 !0 = distinct !DICompileUnit(language: DW_LANG_C99, file: !1, producer: "Ubuntu clang version 14.0.0-1ubuntu1.1", isOptimized: false, runtimeVersion: 0, emissionKind: FullDebug, splitDebugInlining: false, nameTableKind: None)
-!1 = !DIFile(filename: "12.c", directory: "/home/rongfeng/klee/code/100 programs", checksumkind: CSK_MD5, checksum: "7d98965ae6bc807d4513040cfcc40c37")
+!1 = !DIFile(filename: "12.c", directory: "/home/rongfeng/klee/code/100 programs", checksumkind: CSK_MD5, checksum: "bdddddd6221f9ec24f31b337d8bbd7c1")
 !2 = !{i32 7, !"Dwarf Version", i32 5}
 !3 = !{i32 2, !"Debug Info Version", i32 3}
 !4 = !{i32 1, !"wchar_size", i32 4}

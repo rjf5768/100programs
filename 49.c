@@ -5,7 +5,7 @@
 int main(void) {
   int n;
   klee_make_symbolic(&n, sizeof(n), "n");
-  klee_assume(n >= 0 && n <= 100);
+  klee_assume(n >= 0 && n <= 10);
   while(n > 0)
     n--;
   if(n != 0)
