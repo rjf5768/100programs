@@ -1,0 +1,2724 @@
+--- Program 95 ---
+my kquery for test000001:
+array n[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Sle 0
+                  (ReadLSB w32 0 n)))]
+        false)
+
+
+my kquery for test000002:
+array n[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 n))]
+        false)
+
+
+my kquery for test000003:
+array n[4] : w32 -> w8 = symbolic
+(query [(Sle 0
+              N0:(ReadLSB w32 0 n))
+         (Sle N0 31)
+         (Eq false (Eq 0 N0))]
+        false)
+
+
+--- Program 96 ---
+my kquery for test000001:
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Sle 1
+                  (ReadLSB w32 0 transitions)))]
+        false)
+
+
+my kquery for test000002:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 0
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Eq false (Slt 1 N0))]
+        false)
+
+
+my kquery for test000003:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq false
+             (Eq 0
+                 N1:(SRem w32 (ReadLSB w32 0 input)
+                               3)))
+         (Eq false (Eq 1 N1))
+         (Eq false (Slt 1 N0))]
+        false)
+
+
+my kquery for test000004:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 1
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Eq false (Slt 1 N0))]
+        false)
+
+
+my kquery for test000005:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 0
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Eq false (Slt 2 N0))]
+        false)
+
+
+my kquery for test000006:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq false
+             (Eq 0
+                 N1:(SRem w32 (ReadLSB w32 0 input)
+                               3)))
+         (Eq false (Eq 1 N1))
+         (Slt 1 N0)
+         (Eq false (Slt 2 N0))]
+        false)
+
+
+my kquery for test000007:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 0
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Eq false (Slt 3 N0))]
+        false)
+
+
+my kquery for test000008:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq false
+             (Eq 0
+                 N1:(SRem w32 (ReadLSB w32 0 input)
+                               3)))
+         (Eq false (Eq 1 N1))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Eq false (Slt 3 N0))]
+        false)
+
+
+my kquery for test000009:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 1
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Eq false (Slt 2 N0))]
+        false)
+
+
+my kquery for test000010:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 0
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Eq false (Slt 4 N0))]
+        false)
+
+
+my kquery for test000011:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 1
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Eq false (Slt 3 N0))]
+        false)
+
+
+my kquery for test000012:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq false
+             (Eq 0
+                 N1:(SRem w32 (ReadLSB w32 0 input)
+                               3)))
+         (Eq false (Eq 1 N1))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Eq false (Slt 4 N0))]
+        false)
+
+
+my kquery for test000013:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 0
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Eq false (Slt 5 N0))]
+        false)
+
+
+my kquery for test000014:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 0
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Eq false (Slt 6 N0))]
+        false)
+
+
+my kquery for test000015:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 0
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Eq false (Slt 7 N0))]
+        false)
+
+
+my kquery for test000016:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 1
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Eq false (Slt 4 N0))]
+        false)
+
+
+my kquery for test000017:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq false
+             (Eq 0
+                 N1:(SRem w32 (ReadLSB w32 0 input)
+                               3)))
+         (Eq false (Eq 1 N1))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Eq false (Slt 5 N0))]
+        false)
+
+
+my kquery for test000018:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 0
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Eq false (Slt 8 N0))]
+        false)
+
+
+my kquery for test000019:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 1
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Eq false (Slt 5 N0))]
+        false)
+
+
+my kquery for test000020:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 0
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Eq false (Slt 9 N0))]
+        false)
+
+
+my kquery for test000021:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq false
+             (Eq 0
+                 N1:(SRem w32 (ReadLSB w32 0 input)
+                               3)))
+         (Eq false (Eq 1 N1))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Eq false (Slt 6 N0))]
+        false)
+
+
+my kquery for test000022:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 0
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Eq false (Slt 10 N0))]
+        false)
+
+
+my kquery for test000023:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 1
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Eq false (Slt 6 N0))]
+        false)
+
+
+my kquery for test000024:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 0
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Eq false (Slt 11 N0))]
+        false)
+
+
+my kquery for test000025:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 0
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Eq false (Slt 12 N0))]
+        false)
+
+
+my kquery for test000026:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq false
+             (Eq 0
+                 N1:(SRem w32 (ReadLSB w32 0 input)
+                               3)))
+         (Eq false (Eq 1 N1))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Eq false (Slt 7 N0))]
+        false)
+
+
+my kquery for test000027:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 1
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Eq false (Slt 7 N0))]
+        false)
+
+
+my kquery for test000028:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 0
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Eq false (Slt 13 N0))]
+        false)
+
+
+my kquery for test000029:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq false
+             (Eq 0
+                 N1:(SRem w32 (ReadLSB w32 0 input)
+                               3)))
+         (Eq false (Eq 1 N1))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Eq false (Slt 8 N0))]
+        false)
+
+
+my kquery for test000030:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 0
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Eq false (Slt 14 N0))]
+        false)
+
+
+my kquery for test000031:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 1
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Eq false (Slt 8 N0))]
+        false)
+
+
+my kquery for test000032:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 0
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Eq false (Slt 15 N0))]
+        false)
+
+
+my kquery for test000033:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 0
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Slt 15 N0)
+         (Eq false (Slt 16 N0))]
+        false)
+
+
+my kquery for test000034:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq false
+             (Eq 0
+                 N1:(SRem w32 (ReadLSB w32 0 input)
+                               3)))
+         (Eq false (Eq 1 N1))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Eq false (Slt 9 N0))]
+        false)
+
+
+my kquery for test000035:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 1
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Eq false (Slt 9 N0))]
+        false)
+
+
+my kquery for test000036:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 0
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Slt 15 N0)
+         (Eq false (Slt 16 N0))]
+        false)
+
+
+my kquery for test000037:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 0
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Slt 15 N0)
+         (Slt 16 N0)
+         (Eq false (Slt 17 N0))]
+        false)
+
+
+my kquery for test000038:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 1
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Eq false (Slt 10 N0))]
+        false)
+
+
+my kquery for test000039:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq false
+             (Eq 0
+                 N1:(SRem w32 (ReadLSB w32 0 input)
+                               3)))
+         (Eq false (Eq 1 N1))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Eq false (Slt 10 N0))]
+        false)
+
+
+my kquery for test000040:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 0
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Slt 15 N0)
+         (Slt 16 N0)
+         (Slt 17 N0)
+         (Eq false (Slt 18 N0))]
+        false)
+
+
+my kquery for test000041:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 1
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Eq false (Slt 11 N0))]
+        false)
+
+
+my kquery for test000042:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 0
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Slt 15 N0)
+         (Slt 16 N0)
+         (Slt 17 N0)
+         (Slt 18 N0)
+         (Eq false (Slt 19 N0))]
+        false)
+
+
+my kquery for test000043:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq false
+             (Eq 0
+                 N1:(SRem w32 (ReadLSB w32 0 input)
+                               3)))
+         (Eq false (Eq 1 N1))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Eq false (Slt 11 N0))]
+        false)
+
+
+my kquery for test000044:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 1
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Eq false (Slt 12 N0))]
+        false)
+
+
+my kquery for test000045:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq false
+             (Eq 0
+                 N1:(SRem w32 (ReadLSB w32 0 input)
+                               3)))
+         (Eq false (Eq 1 N1))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Eq false (Slt 12 N0))]
+        false)
+
+
+my kquery for test000046:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 1
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Eq false (Slt 13 N0))]
+        false)
+
+
+my kquery for test000047:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq false
+             (Eq 0
+                 N1:(SRem w32 (ReadLSB w32 0 input)
+                               3)))
+         (Eq false (Eq 1 N1))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Eq false (Slt 13 N0))]
+        false)
+
+
+my kquery for test000048:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq false
+             (Eq 0
+                 N1:(SRem w32 (ReadLSB w32 0 input)
+                               3)))
+         (Eq false (Eq 1 N1))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Eq false (Slt 14 N0))]
+        false)
+
+
+my kquery for test000049:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 1
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Eq false (Slt 14 N0))]
+        false)
+
+
+my kquery for test000050:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq false
+             (Eq 0
+                 N1:(SRem w32 (ReadLSB w32 0 input)
+                               3)))
+         (Eq false (Eq 1 N1))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Eq false (Slt 15 N0))]
+        false)
+
+
+my kquery for test000051:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 1
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Eq false (Slt 15 N0))]
+        false)
+
+
+my kquery for test000052:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq false
+             (Eq 0
+                 N1:(SRem w32 (ReadLSB w32 0 input)
+                               3)))
+         (Eq false (Eq 1 N1))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Slt 15 N0)
+         (Eq false (Slt 16 N0))]
+        false)
+
+
+my kquery for test000053:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 1
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Slt 15 N0)
+         (Eq false (Slt 16 N0))]
+        false)
+
+
+my kquery for test000054:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq false
+             (Eq 0
+                 N1:(SRem w32 (ReadLSB w32 0 input)
+                               3)))
+         (Eq false (Eq 1 N1))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Slt 15 N0)
+         (Slt 16 N0)
+         (Eq false (Slt 17 N0))]
+        false)
+
+
+my kquery for test000055:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq false
+             (Eq 0
+                 N1:(SRem w32 (ReadLSB w32 0 input)
+                               3)))
+         (Eq false (Eq 1 N1))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Slt 15 N0)
+         (Slt 16 N0)
+         (Slt 17 N0)
+         (Eq false (Slt 18 N0))]
+        false)
+
+
+my kquery for test000056:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 1
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Slt 15 N0)
+         (Slt 16 N0)
+         (Eq false (Slt 17 N0))]
+        false)
+
+
+my kquery for test000057:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 1
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Slt 15 N0)
+         (Slt 16 N0)
+         (Slt 17 N0)
+         (Eq false (Slt 18 N0))]
+        false)
+
+
+my kquery for test000058:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq false
+             (Eq 0
+                 N1:(SRem w32 (ReadLSB w32 0 input)
+                               3)))
+         (Eq false (Eq 1 N1))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Slt 15 N0)
+         (Slt 16 N0)
+         (Slt 17 N0)
+         (Slt 18 N0)
+         (Eq false (Slt 19 N0))]
+        false)
+
+
+my kquery for test000059:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq false
+             (Eq 0
+                 N1:(SRem w32 (ReadLSB w32 0 input)
+                               3)))
+         (Eq false (Eq 1 N1))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Slt 15 N0)
+         (Slt 16 N0)
+         (Slt 17 N0)
+         (Slt 18 N0)
+         (Slt 19 N0)]
+        false)
+
+
+my kquery for test000060:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 1
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Slt 15 N0)
+         (Slt 16 N0)
+         (Slt 17 N0)
+         (Slt 18 N0)
+         (Eq false (Slt 19 N0))]
+        false)
+
+
+my kquery for test000061:
+array input[4] : w32 -> w8 = symbolic
+array transitions[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 transitions))
+         (Sle N0 20)
+         (Eq 1
+             (SRem w32 (ReadLSB w32 0 input)
+                       3))
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Slt 15 N0)
+         (Slt 16 N0)
+         (Slt 17 N0)
+         (Slt 18 N0)
+         (Slt 19 N0)]
+        false)
+
+
+--- Program 97 ---
+my kquery for test000001:
+array steps[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Sle 1
+                  (ReadLSB w32 0 steps)))]
+        false)
+
+
+my kquery for test000002:
+array step[4] : w32 -> w8 = symbolic
+array steps[4] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 steps))
+         (Sle N0 10)
+         (Eq false
+             (Sle 4294967295
+                  (ReadLSB w32 0 step)))]
+        false)
+
+
+my kquery for test000003:
+array step[4] : w32 -> w8 = symbolic
+array steps[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Sle 4294967295
+                  N0:(ReadLSB w32 0 step)))
+         (Sle N0 1)
+         (Sle 1
+              N1:(ReadLSB w32 0 steps))
+         (Sle N1 10)
+         (Eq false (Slt 1 N1))]
+        false)
+
+
+my kquery for test000004:
+array step[4] : w32 -> w8 = symbolic
+array step_1[4] : w32 -> w8 = symbolic
+array steps[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Sle 4294967295
+                  N0:(ReadLSB w32 0 step)))
+         (Sle N0 1)
+         (Slt 1
+              N1:(ReadLSB w32 0 steps))
+         (Eq false
+             (Sle 4294967295
+                  N2:(ReadLSB w32 0 step_1)))
+         (Sle N2 1)
+         (Sle 1 N1)
+         (Sle N1 10)
+         (Eq false (Slt 2 N1))]
+        false)
+
+
+my kquery for test000005:
+array step[4] : w32 -> w8 = symbolic
+array step_1[4] : w32 -> w8 = symbolic
+array step_2[4] : w32 -> w8 = symbolic
+array steps[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Sle 4294967295
+                  N0:(ReadLSB w32 0 step)))
+         (Sle N0 1)
+         (Slt 1
+              N1:(ReadLSB w32 0 steps))
+         (Eq false
+             (Sle 4294967295
+                  N2:(ReadLSB w32 0 step_1)))
+         (Sle N2 1)
+         (Slt 2 N1)
+         (Eq false
+             (Sle 4294967295
+                  N3:(ReadLSB w32 0 step_2)))
+         (Sle N3 1)
+         (Sle 1 N1)
+         (Sle N1 10)
+         (Eq false (Slt 3 N1))]
+        false)
+
+
+my kquery for test000006:
+array step[4] : w32 -> w8 = symbolic
+array step_1[4] : w32 -> w8 = symbolic
+array step_2[4] : w32 -> w8 = symbolic
+array step_3[4] : w32 -> w8 = symbolic
+array steps[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Sle 4294967295
+                  N0:(ReadLSB w32 0 step)))
+         (Sle N0 1)
+         (Slt 1
+              N1:(ReadLSB w32 0 steps))
+         (Eq false
+             (Sle 4294967295
+                  N2:(ReadLSB w32 0 step_1)))
+         (Sle N2 1)
+         (Slt 2 N1)
+         (Eq false
+             (Sle 4294967295
+                  N3:(ReadLSB w32 0 step_2)))
+         (Sle N3 1)
+         (Slt 3 N1)
+         (Eq false
+             (Sle 4294967295
+                  N4:(ReadLSB w32 0 step_3)))
+         (Sle N4 1)
+         (Sle 1 N1)
+         (Sle N1 10)
+         (Eq false (Slt 4 N1))]
+        false)
+
+
+my kquery for test000007:
+array step[4] : w32 -> w8 = symbolic
+array step_1[4] : w32 -> w8 = symbolic
+array step_2[4] : w32 -> w8 = symbolic
+array step_3[4] : w32 -> w8 = symbolic
+array step_4[4] : w32 -> w8 = symbolic
+array steps[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Sle 4294967295
+                  N0:(ReadLSB w32 0 step)))
+         (Sle N0 1)
+         (Slt 1
+              N1:(ReadLSB w32 0 steps))
+         (Eq false
+             (Sle 4294967295
+                  N2:(ReadLSB w32 0 step_1)))
+         (Sle N2 1)
+         (Slt 2 N1)
+         (Eq false
+             (Sle 4294967295
+                  N3:(ReadLSB w32 0 step_2)))
+         (Sle N3 1)
+         (Slt 3 N1)
+         (Eq false
+             (Sle 4294967295
+                  N4:(ReadLSB w32 0 step_3)))
+         (Sle N4 1)
+         (Slt 4 N1)
+         (Eq false
+             (Sle 4294967295
+                  N5:(ReadLSB w32 0 step_4)))
+         (Sle N5 1)
+         (Sle 1 N1)
+         (Sle N1 10)
+         (Eq false (Slt 5 N1))]
+        false)
+
+
+my kquery for test000008:
+array step[4] : w32 -> w8 = symbolic
+array step_1[4] : w32 -> w8 = symbolic
+array step_2[4] : w32 -> w8 = symbolic
+array step_3[4] : w32 -> w8 = symbolic
+array step_4[4] : w32 -> w8 = symbolic
+array step_5[4] : w32 -> w8 = symbolic
+array steps[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Sle 4294967295
+                  N0:(ReadLSB w32 0 step)))
+         (Sle N0 1)
+         (Slt 1
+              N1:(ReadLSB w32 0 steps))
+         (Eq false
+             (Sle 4294967295
+                  N2:(ReadLSB w32 0 step_1)))
+         (Sle N2 1)
+         (Slt 2 N1)
+         (Eq false
+             (Sle 4294967295
+                  N3:(ReadLSB w32 0 step_2)))
+         (Sle N3 1)
+         (Slt 3 N1)
+         (Eq false
+             (Sle 4294967295
+                  N4:(ReadLSB w32 0 step_3)))
+         (Sle N4 1)
+         (Slt 4 N1)
+         (Eq false
+             (Sle 4294967295
+                  N5:(ReadLSB w32 0 step_4)))
+         (Sle N5 1)
+         (Slt 5 N1)
+         (Eq false
+             (Sle 4294967295
+                  N6:(ReadLSB w32 0 step_5)))
+         (Sle N6 1)
+         (Sle 1 N1)
+         (Sle N1 10)
+         (Eq false (Slt 6 N1))]
+        false)
+
+
+my kquery for test000009:
+array step[4] : w32 -> w8 = symbolic
+array step_1[4] : w32 -> w8 = symbolic
+array step_2[4] : w32 -> w8 = symbolic
+array step_3[4] : w32 -> w8 = symbolic
+array step_4[4] : w32 -> w8 = symbolic
+array step_5[4] : w32 -> w8 = symbolic
+array step_6[4] : w32 -> w8 = symbolic
+array steps[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Sle 4294967295
+                  N0:(ReadLSB w32 0 step)))
+         (Sle N0 1)
+         (Slt 1
+              N1:(ReadLSB w32 0 steps))
+         (Eq false
+             (Sle 4294967295
+                  N2:(ReadLSB w32 0 step_1)))
+         (Sle N2 1)
+         (Slt 2 N1)
+         (Eq false
+             (Sle 4294967295
+                  N3:(ReadLSB w32 0 step_2)))
+         (Sle N3 1)
+         (Slt 3 N1)
+         (Eq false
+             (Sle 4294967295
+                  N4:(ReadLSB w32 0 step_3)))
+         (Sle N4 1)
+         (Slt 4 N1)
+         (Eq false
+             (Sle 4294967295
+                  N5:(ReadLSB w32 0 step_4)))
+         (Sle N5 1)
+         (Slt 5 N1)
+         (Eq false
+             (Sle 4294967295
+                  N6:(ReadLSB w32 0 step_5)))
+         (Sle N6 1)
+         (Slt 6 N1)
+         (Eq false
+             (Sle 4294967295
+                  N7:(ReadLSB w32 0 step_6)))
+         (Sle N7 1)
+         (Sle 1 N1)
+         (Sle N1 10)
+         (Eq false (Slt 7 N1))]
+        false)
+
+
+my kquery for test000010:
+array step[4] : w32 -> w8 = symbolic
+array step_1[4] : w32 -> w8 = symbolic
+array step_2[4] : w32 -> w8 = symbolic
+array step_3[4] : w32 -> w8 = symbolic
+array step_4[4] : w32 -> w8 = symbolic
+array step_5[4] : w32 -> w8 = symbolic
+array step_6[4] : w32 -> w8 = symbolic
+array step_7[4] : w32 -> w8 = symbolic
+array steps[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Sle 4294967295
+                  N0:(ReadLSB w32 0 step)))
+         (Sle N0 1)
+         (Slt 1
+              N1:(ReadLSB w32 0 steps))
+         (Eq false
+             (Sle 4294967295
+                  N2:(ReadLSB w32 0 step_1)))
+         (Sle N2 1)
+         (Slt 2 N1)
+         (Eq false
+             (Sle 4294967295
+                  N3:(ReadLSB w32 0 step_2)))
+         (Sle N3 1)
+         (Slt 3 N1)
+         (Eq false
+             (Sle 4294967295
+                  N4:(ReadLSB w32 0 step_3)))
+         (Sle N4 1)
+         (Slt 4 N1)
+         (Eq false
+             (Sle 4294967295
+                  N5:(ReadLSB w32 0 step_4)))
+         (Sle N5 1)
+         (Slt 5 N1)
+         (Eq false
+             (Sle 4294967295
+                  N6:(ReadLSB w32 0 step_5)))
+         (Sle N6 1)
+         (Slt 6 N1)
+         (Eq false
+             (Sle 4294967295
+                  N7:(ReadLSB w32 0 step_6)))
+         (Sle N7 1)
+         (Slt 7 N1)
+         (Eq false
+             (Sle 4294967295
+                  N8:(ReadLSB w32 0 step_7)))
+         (Sle N8 1)
+         (Sle 1 N1)
+         (Sle N1 10)
+         (Eq false (Slt 8 N1))]
+        false)
+
+
+my kquery for test000011:
+array step[4] : w32 -> w8 = symbolic
+array step_1[4] : w32 -> w8 = symbolic
+array step_2[4] : w32 -> w8 = symbolic
+array step_3[4] : w32 -> w8 = symbolic
+array step_4[4] : w32 -> w8 = symbolic
+array step_5[4] : w32 -> w8 = symbolic
+array step_6[4] : w32 -> w8 = symbolic
+array step_7[4] : w32 -> w8 = symbolic
+array step_8[4] : w32 -> w8 = symbolic
+array steps[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Sle 4294967295
+                  N0:(ReadLSB w32 0 step)))
+         (Sle N0 1)
+         (Slt 1
+              N1:(ReadLSB w32 0 steps))
+         (Eq false
+             (Sle 4294967295
+                  N2:(ReadLSB w32 0 step_1)))
+         (Sle N2 1)
+         (Slt 2 N1)
+         (Eq false
+             (Sle 4294967295
+                  N3:(ReadLSB w32 0 step_2)))
+         (Sle N3 1)
+         (Slt 3 N1)
+         (Eq false
+             (Sle 4294967295
+                  N4:(ReadLSB w32 0 step_3)))
+         (Sle N4 1)
+         (Slt 4 N1)
+         (Eq false
+             (Sle 4294967295
+                  N5:(ReadLSB w32 0 step_4)))
+         (Sle N5 1)
+         (Slt 5 N1)
+         (Eq false
+             (Sle 4294967295
+                  N6:(ReadLSB w32 0 step_5)))
+         (Sle N6 1)
+         (Slt 6 N1)
+         (Eq false
+             (Sle 4294967295
+                  N7:(ReadLSB w32 0 step_6)))
+         (Sle N7 1)
+         (Slt 7 N1)
+         (Eq false
+             (Sle 4294967295
+                  N8:(ReadLSB w32 0 step_7)))
+         (Sle N8 1)
+         (Slt 8 N1)
+         (Eq false
+             (Sle 4294967295
+                  N9:(ReadLSB w32 0 step_8)))
+         (Sle N9 1)
+         (Sle 1 N1)
+         (Sle N1 10)
+         (Eq false (Slt 9 N1))]
+        false)
+
+
+my kquery for test000012:
+array step[4] : w32 -> w8 = symbolic
+array step_1[4] : w32 -> w8 = symbolic
+array step_2[4] : w32 -> w8 = symbolic
+array step_3[4] : w32 -> w8 = symbolic
+array step_4[4] : w32 -> w8 = symbolic
+array step_5[4] : w32 -> w8 = symbolic
+array step_6[4] : w32 -> w8 = symbolic
+array step_7[4] : w32 -> w8 = symbolic
+array step_8[4] : w32 -> w8 = symbolic
+array step_9[4] : w32 -> w8 = symbolic
+array steps[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Sle 4294967295
+                  N0:(ReadLSB w32 0 step)))
+         (Sle N0 1)
+         (Slt 1
+              N1:(ReadLSB w32 0 steps))
+         (Eq false
+             (Sle 4294967295
+                  N2:(ReadLSB w32 0 step_1)))
+         (Sle N2 1)
+         (Slt 2 N1)
+         (Eq false
+             (Sle 4294967295
+                  N3:(ReadLSB w32 0 step_2)))
+         (Sle N3 1)
+         (Slt 3 N1)
+         (Eq false
+             (Sle 4294967295
+                  N4:(ReadLSB w32 0 step_3)))
+         (Sle N4 1)
+         (Slt 4 N1)
+         (Eq false
+             (Sle 4294967295
+                  N5:(ReadLSB w32 0 step_4)))
+         (Sle N5 1)
+         (Slt 5 N1)
+         (Eq false
+             (Sle 4294967295
+                  N6:(ReadLSB w32 0 step_5)))
+         (Sle N6 1)
+         (Slt 6 N1)
+         (Eq false
+             (Sle 4294967295
+                  N7:(ReadLSB w32 0 step_6)))
+         (Sle N7 1)
+         (Slt 7 N1)
+         (Eq false
+             (Sle 4294967295
+                  N8:(ReadLSB w32 0 step_7)))
+         (Sle N8 1)
+         (Slt 8 N1)
+         (Eq false
+             (Sle 4294967295
+                  N9:(ReadLSB w32 0 step_8)))
+         (Sle N9 1)
+         (Slt 9 N1)
+         (Eq false
+             (Sle 4294967295
+                  N10:(ReadLSB w32 0 step_9)))
+         (Sle N10 1)
+         (Sle 1 N1)
+         (Sle N1 10)]
+        false)
+
+
+--- Program 98 ---
+my kquery for test000001:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 flag))
+         (Eq false
+             (Sle 1
+                  (ReadLSB w32 0 iterations)))]
+        false)
+
+
+my kquery for test000002:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Eq false (Slt 1 N0))]
+        false)
+
+
+my kquery for test000003:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Eq false (Slt 1 N0))]
+        false)
+
+
+my kquery for test000004:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Eq false (Slt 2 N0))]
+        false)
+
+
+my kquery for test000005:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Eq false (Slt 2 N0))]
+        false)
+
+
+my kquery for test000006:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Eq false (Slt 3 N0))]
+        false)
+
+
+my kquery for test000007:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Eq false (Slt 3 N0))]
+        false)
+
+
+my kquery for test000008:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Eq false (Slt 4 N0))]
+        false)
+
+
+my kquery for test000009:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Eq false (Slt 4 N0))]
+        false)
+
+
+my kquery for test000010:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Eq false (Slt 5 N0))]
+        false)
+
+
+my kquery for test000011:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Eq false (Slt 5 N0))]
+        false)
+
+
+my kquery for test000012:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Eq false (Slt 6 N0))]
+        false)
+
+
+my kquery for test000013:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Eq false (Slt 7 N0))]
+        false)
+
+
+my kquery for test000014:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Eq false (Slt 6 N0))]
+        false)
+
+
+my kquery for test000015:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Eq false (Slt 8 N0))]
+        false)
+
+
+my kquery for test000016:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Eq false (Slt 7 N0))]
+        false)
+
+
+my kquery for test000017:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Eq false (Slt 9 N0))]
+        false)
+
+
+my kquery for test000018:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Eq false (Slt 8 N0))]
+        false)
+
+
+my kquery for test000019:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Eq false (Slt 9 N0))]
+        false)
+
+
+my kquery for test000020:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Eq false (Slt 9 N0))]
+        false)
+
+
+my kquery for test000021:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Eq false (Slt 9 N0))]
+        false)
+
+
+my kquery for test000022:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Eq false (Slt 10 N0))]
+        false)
+
+
+my kquery for test000023:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Eq false (Slt 10 N0))]
+        false)
+
+
+my kquery for test000024:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Eq false (Slt 10 N0))]
+        false)
+
+
+my kquery for test000025:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Eq false (Slt 11 N0))]
+        false)
+
+
+my kquery for test000026:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Eq false (Slt 11 N0))]
+        false)
+
+
+my kquery for test000027:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Eq false (Slt 11 N0))]
+        false)
+
+
+my kquery for test000028:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Eq false (Slt 12 N0))]
+        false)
+
+
+my kquery for test000029:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Eq false (Slt 12 N0))]
+        false)
+
+
+my kquery for test000030:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Eq false (Slt 13 N0))]
+        false)
+
+
+my kquery for test000031:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Eq false (Slt 13 N0))]
+        false)
+
+
+my kquery for test000032:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Eq false (Slt 14 N0))]
+        false)
+
+
+my kquery for test000033:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Eq false (Slt 14 N0))]
+        false)
+
+
+my kquery for test000034:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Eq false (Slt 14 N0))]
+        false)
+
+
+my kquery for test000035:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Eq false (Slt 15 N0))]
+        false)
+
+
+my kquery for test000036:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Eq false (Slt 14 N0))]
+        false)
+
+
+my kquery for test000037:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Slt 15 N0)
+         (Eq false (Slt 16 N0))]
+        false)
+
+
+my kquery for test000038:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Slt 15 N0)
+         (Eq false (Slt 16 N0))]
+        false)
+
+
+my kquery for test000039:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Eq false (Slt 15 N0))]
+        false)
+
+
+my kquery for test000040:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Slt 15 N0)
+         (Eq false (Slt 16 N0))]
+        false)
+
+
+my kquery for test000041:
+array flag[4] : w32 -> w8 = symbolic
+array iterations[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 flag))
+         (Sle 1
+              N0:(ReadLSB w32 0 iterations))
+         (Sle N0 20)
+         (Slt 1 N0)
+         (Slt 2 N0)
+         (Slt 3 N0)
+         (Slt 4 N0)
+         (Slt 5 N0)
+         (Slt 6 N0)
+         (Slt 7 N0)
+         (Slt 8 N0)
+         (Slt 9 N0)
+         (Slt 10 N0)
+         (Slt 11 N0)
+         (Slt 12 N0)
+         (Slt 13 N0)
+         (Slt 14 N0)
+         (Slt 15 N0)
+         (Eq false (Slt 16 N0))]
+        false)
+
+
+--- Program 99 ---
+my kquery for test000001:
+array n[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Sle 0
+                  (ReadLSB w32 0 n)))]
+        false)
+
+
+my kquery for test000002:
+array n[4] : w32 -> w8 = symbolic
+(query [(Sle 0
+              N0:(ReadLSB w32 0 n))
+         (Sle N0 1000)
+         (Eq false
+             (Slt 0 (SDiv w32 N0 10)))]
+        false)
+
+
+my kquery for test000003:
+array n[4] : w32 -> w8 = symbolic
+(query [(Sle 0
+              N0:(ReadLSB w32 0 n))
+         (Sle N0 1000)
+         (Slt 0 N1:(SDiv w32 N0 10))
+         (Eq false
+             (Slt 0 (SDiv w32 N1 10)))]
+        false)
+
+
+my kquery for test000004:
+array n[4] : w32 -> w8 = symbolic
+(query [(Sle 0
+              N0:(ReadLSB w32 0 n))
+         (Sle N0 1000)
+         (Slt 0 N1:(SDiv w32 N0 10))
+         (Slt 0 N2:(SDiv w32 N1 10))
+         (Eq false
+             (Slt 0 (SDiv w32 N2 10)))]
+        false)
+
+
+my kquery for test000005:
+array n[4] : w32 -> w8 = symbolic
+(query [(Sle 0
+              N0:(ReadLSB w32 0 n))
+         (Sle N0 1000)
+         (Slt 0 N1:(SDiv w32 N0 10))
+         (Slt 0 N2:(SDiv w32 N1 10))
+         (Slt 0 (SDiv w32 N2 10))]
+        false)
+
+
